@@ -33,9 +33,6 @@ public class Admin extends BaseEntity {
     @ColumnDefault(value = "1")
     private Boolean active = true;
 
-    @Column(name = "device_token")
-    private String deviceToken;
-
     @Column(name = "jwt_token")
     private String jwtToken;
 
@@ -69,14 +66,6 @@ public class Admin extends BaseEntity {
 
     public void setActive(Boolean active) {
         this.active = active;
-    }
-
-    public String getDeviceToken() {
-        return deviceToken;
-    }
-
-    public void setDeviceToken(String deviceToken) {
-        this.deviceToken = deviceToken;
     }
 
     public String getJwtToken() {

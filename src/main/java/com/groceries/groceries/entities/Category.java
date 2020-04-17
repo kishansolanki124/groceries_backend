@@ -1,5 +1,6 @@
 package com.groceries.groceries.entities;
 
+import com.groceries.groceries.entities.BaseEntity;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -23,7 +24,7 @@ public class Category extends BaseEntity {
     private String categoryName;
 
     @Column(name = "category_image")
-    private String category_image;
+    private String categoryImage;
 
     @Column(name = "keyword")
     private String keyword;
@@ -59,19 +60,19 @@ public class Category extends BaseEntity {
         this.categoryName = categoryName;
     }
 
-    public String getCategory_image() {
-        return category_image;
-    }
-
-    public void setCategory_image(String category_image) {
-        this.category_image = category_image;
-    }
-
     public String getKeyword() {
         return keyword;
     }
 
     public void setKeyword(String keyword) {
         this.keyword = keyword;
+    }
+
+    public String getCategoryImage() {
+        return categoryImage;
+    }
+
+    public void setCategoryImage(String categoryImage) {
+        this.categoryImage = categoryImage;
     }
 }
